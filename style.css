@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+html {
+    width: 100%;
+}
+
+body {
+    background-color: slategrey;
+    width: 90%;
+    margin: 50px auto 0 auto;
+}
+
+.quiz-area {
+    background-color: white;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border: 2px solid blue;
+    border-radius: 20px;
+}
+
+h1 {
+    margin: 20px auto 20px auto;
+    width: fit-content;
+    font-family: 'Heebo', sans-serif;
+}
+
+.title {
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: lightblue;
+    margin: auto;
+    width: 400px;
+}
+
+
+.container {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: lightblue;
+    justify-content: space-around;
+    border-radius: 15px;
+    align-items: center;
+}
+
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 5px;
+    position: relative;
+    transition: all 2s ease;
+    transform-style: preserve-3d;
+    font-family: 'Kalam', cursive;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+p {
+    text-align: center;
+}
+
+.question,
+.answer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.question {
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.answer {
+    transform: rotateY(180deg);
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.card{
+    perspective: 1000px;
+}
